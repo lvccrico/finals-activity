@@ -2,13 +2,36 @@
 
 @section('extra-css')
     <link href="{{ asset('css/checkout.css') }}" rel="stylesheet">
+    <style type="text/css">
+        table {
+            background: #fff;
+            border: solid #999 1px;
+        }
+    </style>
 @endsection
 
 @section('content')
 
 
     <div class="container wrapper">
-        <p><a href="{{ url('shop') }}">Home</a> / Cart</p>
+        <div class="row cart-head">
+            <div class="container">
+            <div class="row">
+                <p></p>
+            </div>
+            <div class="row">
+                <div style="display: table; margin: auto;">
+                    <span class="step step_complete"> <a href="#" class="check-bc">Cart</a> <span class="step_line step_complete"> </span> <span class="step_line backline"> </span> </span>
+                    <span class="step"> <a href="#" class="check-bc">Checkout</a> <span class="step_line "> </span> <span class="step_line backline"> </span> </span>
+                    <span class="step_thankyou check-bc step_complete">Thank you</span>
+                </div>
+            </div>
+            <div class="row">
+                <p></p>
+            </div>
+            </div>
+        </div>
+        {{-- <p><a href="{{ url('shop') }}">Home</a> / Cart</p> --}}
 
         <h1>Your Cart</h1>
 
@@ -94,18 +117,17 @@
 
                 </tbody>
             </table>
-
-            <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
-            <a href="{{ url('/checkout') }}" class="btn btn-success btn-lg">Proceed to Checkout</a>
-
-            <div style="float:right">
+            <div style="float:left;">
                 <form action="{{ url('/emptyCart') }}" method="POST">
                     {!! csrf_field() !!}
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="submit" class="btn btn-danger btn-lg" value="Empty Cart">
                 </form>
             </div>
-
+            <div style="float: right;"> 
+                <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
+                <a href="{{ url('/checkout') }}" class="btn btn-success btn-lg">Proceed to Checkout</a>
+            </div>
         @else
 
             <h3>You have no items in your shopping cart</h3>

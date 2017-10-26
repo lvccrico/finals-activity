@@ -31,7 +31,7 @@
                 <!--REVIEW ORDER-->
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        Review Order <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
+                        Review Order <div class="pull-right"><small><a class="afix-1" href="{{ url('cart') }}">Edit Cart</a></small></div>
                     </div>
                     <div class="panel-body">
 

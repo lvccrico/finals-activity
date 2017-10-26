@@ -55,6 +55,11 @@ html,body,.wrapper{
     text-align: center;
     width: 100px;
 }
+
+.step_thankyou_complete {
+  color: #eee;
+}
+
 .step.check_step {
     margin-left: 5px;
 }
@@ -312,6 +317,13 @@ hr{
 /* Color of invalid field */
 .help-block {
     color: #a94442;
+}
+
+.thankyou_message {
+  text-align: center;
+  background: #fff;
+  /*margin-top: 5px;*/
+  margin-bottom: 50px;
 }
 
 /*

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>@yield('title', 'Laravel Shopping Cart Example')</title>
+    <title>@yield('title', 'Shopping Cart')</title>
     <meta name="description" content="Laravel Shopping Cart Example">
 
     <!-- Mobile Specific Meta -->
@@ -21,6 +21,10 @@
 
     <style>
 
+        .navbar {
+            background-color: rgba(0,0,0,0.87);
+        }
+
         .spacer {
             margin-bottom: 100px;
         }
@@ -30,8 +34,10 @@
         }
 
         footer {
-            background-color: #f5f5f5;
+            /*background-color: #f5f5f5;*/
+            background-color: rgba(0,0,0,0.87);
             padding: 20px 0;
+            margin-top: auto;
         }
 
         .table>tbody>tr>td {
