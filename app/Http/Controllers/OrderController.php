@@ -29,23 +29,6 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        
-        // $customer = Customer::create([
-        //     'first_name' => $data['first_name'],
-        //     'last_name' => $data['last_name'],
-        //     'address' => $data['address']
-        // ]);
-
-        // $user = new User;
-        // $user->email = $data['email'];
-        // $user->password = bcrypt($data['password']);
-
-        // $cart = new Cart; 
-        // $cart->customer()->associate($customer);
-        // $cart->save();
-
-        // $customer->user()->save($user);
-
         $request->validate([
             'first_name' => 'required|string|max:50',
             'last_name' => 'required|string|max:50',

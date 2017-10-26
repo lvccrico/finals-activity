@@ -15,10 +15,6 @@ Route::get('/', function () {
     return redirect('shop');
 });
 
-Route::get('/thankyou', function () {
-    return view('thankyou');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -28,4 +24,3 @@ Route::get('checkout', 'CartController@checkout')->middleware('auth');
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show', 'update', 'destroy']]);
 Route::resource('cart', 'CartController');
 Route::resource('order', 'OrderController', ['only' => ['index', 'show', 'store', 'destroy']]);
-// Route::post('order', 'OrderController@store');
